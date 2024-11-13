@@ -22,7 +22,7 @@ Start airflow with webserver(user and password should be on the logs):
 meltano invoke airflow webserver
 ```
 
-## Step 4: Manually trigger the dag or Task
+## Step 4: Manually trigger the pipeline or a Task
 
 Trigger the hole process for a specific date (Replace \<DATE> with desired date):
 ```
