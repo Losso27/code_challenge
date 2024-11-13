@@ -12,21 +12,17 @@ pip install "meltano"
 docker-compose up -d
 ```
 
-## Step 3: Setting up the environment variables
-```
-source set_variables.sh
-```
-
-## Step 4: Start Airflow
-Start airflow with webserver(user and password should be on the logs):
-```
-meltano invoke airflow standalone
-```
+## Step 3: Start Airflow
 Only start the scheduler:
 ```
-meltano invoke airflow scheduler
+meltano invoke airflow scheduler -D
 ```
-## Step 5: Manually trigger the dag or Task
+Start airflow with webserver(user and password should be on the logs):
+```
+meltano invoke airflow webserver
+```
+
+## Step 4: Manually trigger the dag or Task
 
 Trigger the hole process for a specific date (Replace \<DATE> with desired date):
 ```
